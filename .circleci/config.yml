@@ -22,6 +22,7 @@ jobs:
       - run:
           name: Test
           command: |
+            sudo apt-get upgrade 
             sudo apt install -y libcppunit-dev
             mvn clean install -T 100
 
