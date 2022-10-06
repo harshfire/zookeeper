@@ -23,7 +23,7 @@ jobs:
           name: Test
           command: |
             sudo apt-get upgrade 
-            sudo apt install -y libcppunit-dev
+            sudo apt-get install -y libcppunit-dev
             mvn clean install -T 100
 
 # Invoke jobs via workflows
