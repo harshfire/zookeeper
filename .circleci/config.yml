@@ -23,8 +23,7 @@ jobs:
           name: Test
           command: |
             sudo apt-get upgrade 
-            sudo apt-get install -y libcppunit-dev
-            mvn clean install -T 100
+            mvn clean install
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
