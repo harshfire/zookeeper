@@ -23,7 +23,19 @@ jobs:
           name: Test
           command: |
             sudo apt-get upgrade 
-            mvn clean install -DtestFailureIgnore=true
+            sudo apt-get install -y \
+                  g++ \
+                  cmake \
+                  autoconf \
+                  pkg-config \
+                  libcppunit-dev \
+                  libtool \
+                  openssl \
+                  libssl-dev \
+                  libsasl2-modules-gssapi-mit \
+                  libsasl2-modules \
+                  libsasl2-dev
+            mvn clean install
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
