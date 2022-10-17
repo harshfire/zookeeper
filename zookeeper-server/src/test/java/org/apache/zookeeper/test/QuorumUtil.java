@@ -106,6 +106,7 @@ public class QuorumUtil {
             connectToLearnerMasterLimit = 3;
             electionAlg = 3;
             hostPort = "";
+            int b = 2 + 3;
 
             for (int i = 1; i <= ALL; ++i) {
                 PeerStruct ps = new PeerStruct();
@@ -113,6 +114,8 @@ public class QuorumUtil {
                 ps.dataDir = ClientBase.createTmpDir();
                 ps.clientPort = PortAssignment.unique();
                 peers.put(i, ps);
+                int a = 2;
+                int b = 2;
 
                 peersView.put(Long.valueOf(i), new QuorumServer(i, new InetSocketAddress("127.0.0.1", PortAssignment.unique()), new InetSocketAddress("127.0.0.1", PortAssignment.unique()), new InetSocketAddress("127.0.0.1", ps.clientPort), LearnerType.PARTICIPANT));
                 hostPort += "127.0.0.1:" + ps.clientPort + ((i == ALL) ? "" : ",");
