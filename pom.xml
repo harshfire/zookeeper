@@ -831,7 +831,7 @@
               <trimStackTrace>false</trimStackTrace>
               <redirectTestOutputToFile>${redirectTestOutputToFile}</redirectTestOutputToFile>
               <parallel>all</parallel>
-              <threadCount>100</threadCount>
+              <threadCount>500</threadCount>
               <threadCountMethods>100</threadCountMethods>
               <threadCountSuites>100</threadCountSuites>
               <perCoreThreadCount>false</perCoreThreadCount>
