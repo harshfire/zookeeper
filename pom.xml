@@ -352,6 +352,7 @@
       </activation>
       <properties>
         <maven.compiler.release>8</maven.compiler.release>
+        <harnessArgLine></harnessArgLine>
       </properties>
       <build>
         <pluginManagement>
@@ -832,6 +833,7 @@
               <redirectTestOutputToFile>${redirectTestOutputToFile}</redirectTestOutputToFile>
               <parallel>classes</parallel>
               <parallel>methods</parallel>
+              <argLine>${harnessArgLine}  @{argLine} </argLine>
               <threadCount>1000</threadCount>
           </configuration>
         </plugin>
