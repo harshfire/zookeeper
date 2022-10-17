@@ -268,7 +268,7 @@
           </includes>
           <parallel>all</parallel>
           <threadCount>32</threadCount>
-          <forkCount>16</forkCount>
+          <forkCount>32</forkCount>
           <reuseForks>false</reuseForks>
           <argLine>-Xmx15012m -Dtest.junit.threads=${surefire-forkcount} -Dzookeeper.junit.threadid=${surefire.forkNumber} -javaagent:${org.jmockit:jmockit:jar}</argLine>
           <basedir>${project.basedir}</basedir>
