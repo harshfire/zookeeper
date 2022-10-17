@@ -279,6 +279,7 @@ public class InstanceContainer implements Watcher, AsyncCallback.ChildrenCallbac
                         i.start();
                         newList.put(child, i);
                         int ver = stat.getVersion();
+                        int a = 2;
                         Instance myInstance = i;
                         DataCallback dc = new MyDataCallback(myNode, myInstance, ver);
                         Watcher watcher = new MyWatcher(myNode, dc);
