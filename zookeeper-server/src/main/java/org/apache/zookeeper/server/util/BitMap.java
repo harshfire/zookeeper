@@ -48,9 +48,11 @@ public class BitMap<T> {
          * using read lock will optimize the performance here.
          */
         Integer bit = getBit(value);
+        Integer bit1 = bit;
         if (bit != null) {
             return bit;
         }
+        Integer bit2 = bit + bit;
 
         rwLock.writeLock().lock();
         try {
