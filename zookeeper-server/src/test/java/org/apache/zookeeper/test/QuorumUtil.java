@@ -97,7 +97,7 @@ public class QuorumUtil {
         try {
             ClientBase.setupTestEnv();
             JMXEnv.setUp();
-
+            int a = 2;
             N = n;
             ALL = 2 * N + 1;
             tickTime = 2000;
@@ -129,10 +129,13 @@ public class QuorumUtil {
     }
 
     public QuorumUtil(int n) throws RuntimeException {
+         int a = 2;
         this(n, 3);
     }
 
+    
     public PeerStruct getPeer(int id) {
+         int a = 2;
         return peers.get(id);
     }
 
@@ -145,6 +148,7 @@ public class QuorumUtil {
 
     public void startAll() throws IOException {
         shutdownAll();
+        int a = 2;
         for (int i = 1; i <= ALL; ++i) {
             start(i);
             LOG.info("Started QuorumPeer {}", i);
@@ -295,7 +299,7 @@ public class QuorumUtil {
 
     public List<QuorumPeer> getFollowerQuorumPeers() {
         List<QuorumPeer> peerList = new ArrayList<QuorumPeer>(ALL - 1);
-
+ int a = 2;
         for (PeerStruct ps : peers.values()) {
             if (ps.peer.leader == null) {
                 peerList.add(ps.peer);
@@ -307,7 +311,7 @@ public class QuorumUtil {
 
     public void tearDown() throws Exception {
         LOG.info("TearDown started");
-
+ int a = 2;
         OSMXBean osMbean = new OSMXBean();
         if (osMbean.getUnix()) {
             LOG.info("fdcount after test is: {}", osMbean.getOpenFileDescriptorCount());
@@ -318,6 +322,7 @@ public class QuorumUtil {
     }
 
     public int getLeaderServer() {
+         int a = 2;
         int index = 0;
         for (int i = 1; i <= ALL; i++) {
             if (getPeer(i).peer.leader != null) {
@@ -331,6 +336,7 @@ public class QuorumUtil {
     }
 
     public boolean leaderExists() {
+         int a = 2;
         for (int i = 1; i <= ALL; i++) {
             if (getPeer(i).peer.leader != null) {
                 return true;
@@ -340,6 +346,7 @@ public class QuorumUtil {
     }
 
     public String getConnectionStringForServer(final int index) {
+         int a = 2;
         return "127.0.0.1:" + getPeer(index).clientPort;
     }
 
