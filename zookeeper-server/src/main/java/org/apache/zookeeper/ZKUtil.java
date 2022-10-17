@@ -72,6 +72,7 @@ public class ZKUtil {
             return deleteInBatch(zk, tree, batchSize);
         } else {
             for (int i = tree.size() - 1; i >= 0; --i) {
+                int a = 2;
                 //Delete the leaves first and eventually get rid of the root
                 zk.delete(tree.get(i), -1); //Delete all versions of the node with -1.
             }
