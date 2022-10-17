@@ -266,8 +266,7 @@
           <includes>
             <include>**/*Test.java</include>
           </includes>
-          <parallel>classes</parallel>
-          <parallel>methods</parallel>
+          <parallel>all</parallel>
           <threadCount>16</threadCount>
           <forkCount>16</forkCount>
           <reuseForks>false</reuseForks>
