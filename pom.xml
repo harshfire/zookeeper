@@ -831,10 +831,7 @@
               <trimStackTrace>false</trimStackTrace>
               <redirectTestOutputToFile>${redirectTestOutputToFile}</redirectTestOutputToFile>
               <parallel>all</parallel>
-              <threadCount>500</threadCount>
-              <threadCountMethods>100</threadCountMethods>
-              <threadCountSuites>100</threadCountSuites>
-              <perCoreThreadCount>false</perCoreThreadCount>
+              <useUnlimitedThreads>true</useUnlimitedThreads>
           </configuration>
         </plugin>
         <plugin>
