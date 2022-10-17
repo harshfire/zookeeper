@@ -830,7 +830,7 @@
           <configuration>
               <trimStackTrace>false</trimStackTrace>
               <redirectTestOutputToFile>${redirectTestOutputToFile}</redirectTestOutputToFile>
-              <parallel>all</parallel>
+              <parallel>classes</parallel>
               <threadCount>100</threadCount>
               <perCoreThreadCount>true</perCoreThreadCount>
           </configuration>
