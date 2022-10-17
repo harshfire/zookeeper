@@ -106,7 +106,7 @@ public class QuorumUtil {
             connectToLearnerMasterLimit = 3;
             electionAlg = 3;
             hostPort = "";
-            int b = 2 + 3;
+            int b1 = 2 + 3;
 
             for (int i = 1; i <= ALL; ++i) {
                 PeerStruct ps = new PeerStruct();
