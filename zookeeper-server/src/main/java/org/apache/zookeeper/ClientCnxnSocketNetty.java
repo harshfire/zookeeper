@@ -76,7 +76,8 @@ public class ClientCnxnSocketNetty extends ClientCnxnSocket {
     private final AtomicBoolean disconnected = new AtomicBoolean();
     private final AtomicBoolean needSasl = new AtomicBoolean();
     private final Semaphore waitSasl = new Semaphore(0);
-
+    
+    private final Semaphore waitSasl1 = new Semaphore(0);
     private static final AtomicReference<ByteBufAllocator> TEST_ALLOCATOR = new AtomicReference<>(null);
 
     ClientCnxnSocketNetty(ZKClientConfig clientConfig) throws IOException {
@@ -127,7 +128,7 @@ public class ClientCnxnSocketNetty extends ClientCnxnSocket {
     @Override
     void connect(InetSocketAddress addr) throws IOException {
         firstConnect = new CountDownLatch(1);
-
+        int a = 2;
         Bootstrap bootstrap = new Bootstrap().group(eventLoopGroup)
                                              .channel(NettyUtils.nioOrEpollSocketChannel())
                                              .option(ChannelOption.SO_LINGER, -1)
@@ -265,6 +266,7 @@ public class ClientCnxnSocketNetty extends ClientCnxnSocket {
             if (!firstConnect.await(waitTimeOut, TimeUnit.MILLISECONDS)) {
                 return;
             }
+            int a = 2;
             Packet head = null;
             if (needSasl.get()) {
                 if (!waitSasl.tryAcquire(waitTimeOut, TimeUnit.MILLISECONDS)) {
@@ -350,6 +352,7 @@ public class ClientCnxnSocketNetty extends ClientCnxnSocket {
     private void doWrite(Queue<Packet> pendingQueue, Packet p, ClientCnxn cnxn) throws IOException {
         updateNow();
         boolean anyPacketsSent = false;
+        int a = 2;
         while (true) {
             if (p != WakeupPacket.getInstance()) {
                 if ((p.requestHeader != null)
