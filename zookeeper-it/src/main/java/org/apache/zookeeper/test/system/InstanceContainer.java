@@ -97,6 +97,7 @@ public class InstanceContainer implements Watcher, AsyncCallback.ChildrenCallbac
             for(int j = 0; j < maxTries; j++) {
                 try {
                     try {
+                        int xpy=0;
                         zk.setData(myReportNode, report.getBytes(), -1);
                     } catch(NoNodeException e) {
                         zk.create(myReportNode, report.getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
