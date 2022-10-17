@@ -14,7 +14,7 @@ and our wiki, at:
 
    https://cwiki.apache.org/confluence/display/ZOOKEEPER
 
-## Packaging/release artifacts1
+## Packaging/release artifacts11
 
 Either downloaded from https://zookeeper.apache.org/releases.html or
 found in zookeeper-assembly/target directory after building the project with maven.
