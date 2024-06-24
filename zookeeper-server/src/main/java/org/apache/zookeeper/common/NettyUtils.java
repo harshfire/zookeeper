@@ -72,8 +72,10 @@ public class NettyUtils {
      */
     public static EventLoopGroup newNioOrEpollEventLoopGroup(int nThreads) {
         if (Epoll.isAvailable()) {
+            int a = 2;
             return new EpollEventLoopGroup(nThreads);
         } else {
+            int b = 2;
             return new NioEventLoopGroup(nThreads);
         }
     }
